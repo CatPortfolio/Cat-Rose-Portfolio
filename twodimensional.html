@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+ <link rel="stylesheet" href="styles.css">
+
+   <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+   <title>twodimensional</title>
+  </head>
+  <body>
+   <!-- Header of the website -->
+   <header>
+
+
+
+ <div class="navbar">
+           <a href="index.html">Home</a>
+           <a href="about.html">About</a>
+           <a href="twodimensional.html">2D</a>
+       </div>
+
+
+
+       <h1>2D</h1>
+   </header>
+    
+ <h2 class= "h2alt" ><big><strong> Magazine Pages </big></strong></h2>
+ <h3 class="h2altSmaller"><a href="https://www.instagram.com/pixlmag/">Pixel Magazine Instagram </a></h3>
+    
+     <div class="container">
+      <div class="main-content">
+         
+        <section>
+        <h2><big><strong> Mechanism Description 1</big></strong></h2>
+              <h3> <i> Pixel Magazine | Edited Photo </i> </h3>
+               <img src="images\2D\26desc1.png" alt="Mechanism Description Pg 1">
+           </section>
+        
+         <section>
+        <h2><big><strong> Mechanism Description 2 </big></strong></h2>
+              <h3> <i> Pixel Magazine | Aluminum plate </i> </h3>
+               <img src="images\2D\26desc2.png" alt=" Mechanism Description Pg 2">
+           </section>
+        
+         <section>
+        <h2><big><strong> Mechanism Exec 1 </big></strong></h2>
+              <h3> <i> Pixel Magazine | Photoshop </i>  </h3>
+               <img src="images\2D\26exec1.png" alt=" Mechanism Exec Pg 2">
+           </section>
+        
+         <section>
+        <h2><big><strong> Mechanism Exec 2 </big></strong></h2>
+              <h3> <i> Pixel Magazine | Photoshop </i> </h3>
+               <img src="images\2D\26exec2.png" alt=" Mechanism Exec Pg 2">
+           </section>
+        
+ <section>
+        <h2><big><strong> Incantation Description 1 </big></strong></h2>
+              <h3> <i> Pixel Magazine | Ink on paper </i> </h3>
+               <img src="images\2D\incantation_desc1.png" alt=" Incantation Description Pg 1">
+           </section>
+
+           
+ <section>
+        <h2><big><strong> Incantation Description 2 </big></strong></h2>
+              <h3> <i> Pixel Magazine | Ink on paper </i> </h3>
+               <img src="images\2D\incantation_desc2.png" alt=" Incantation Description Pg 2">
+           </section>
+           
+ <section>
+        <h2><big><strong> OBJECTION 1 </big></strong></h2>
+              <h3> <i> Pixel Magazine | Photoshop </i> </h3>
+               <img src="images\2D\OBJECTION_pg1.png" alt=" OBJECTION Pg 2">
+           </section>
+        
+
+ <section>
+        <h2><big><strong> OBJECTION 2 </big></strong></h2>
+              <h3> <i> Pixel Magazine | Photoshop </i> </h3>
+               <img src="images\2D\OBJECTION_pg2.png" alt=" OBJECTION Pg 2">
+           </section>
+
+       </div>
+ </div>
+<br>
+
+       <!-- Footer of the website -->
+       <footer>
+        <br>
+       <br>
+           <p> * * * </p>
+
+
+
+<h2 class= "h2alt" >What is your favorite set of images?</h2>
+             <form id="form1">
+                <input type="radio" name="youroption" value="Thank you!" id="option1" /> <label for="option1">Mechanism Description</label><br>
+                <input type="radio" name="youroption" value="Aww, Thanks!" id="option2"/> <label for="option2">Incantation Description</label><br>
+                <input type="radio" name="youroption" value="Aww, Thanks!" id="option3"/> <label for="option3">Mechanism Exec</label><br>
+                <input type="radio" name="youroption" value="Thanks! I had fun with this one."/> <label for="option4">OBJECTION</label><br>
+                <input type="submit" value="Submit">
+                </form>
+                <p id="answer"></p>
+                             
+                <script>
+               
+                // the following lines grab the input value from the form and store it in a variable
+                    document.getElementById("form1").onsubmit=function() {
+                   option = document.querySelector('input[name = "youroption"]:checked').value;
+               
+                   document.getElementById("answer").innerHTML = option;
+               
+                 return false; // required to not refresh the page
+                }// end the submit function
+                </script>
+
+
+
+       </footer>
+  
+</body>
+</html>
+
+

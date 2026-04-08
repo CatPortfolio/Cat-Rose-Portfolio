@@ -1,0 +1,282 @@
+/* General styles */
+
+
+
+
+
+
+
+/* Navigation Bar Container */
+.navbar {
+   overflow: hidden;
+   font-size: medium;
+}
+
+
+/* Navigation Links */
+.navbar a {
+   float: right;
+   display: block;
+   color: white;
+   text-align: center;
+   padding: 12px 12px;
+   text-decoration: none;
+}
+
+
+/* Change color on hover */
+.navbar a:hover {
+   color: #7cc819;
+}
+
+
+
+
+
+
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   background-color: #121212; /* dark grey */
+   color: black;
+   align-content: center;
+}
+
+
+/* Title */
+title {
+   color: #7cc819;
+}
+
+
+/* Header */
+header {
+   background-color: black;
+   color: white;
+   text-align: center;
+   padding: 1em;
+   font-size: 3em;
+}
+
+
+/* Sub-Headers (H2) */
+h2 {
+   color: #ff69b4; /* Pink */
+   margin-top: 1em;
+   text-align: center;
+}
+
+.h2alt {
+   color: #8254de; /* purple */
+   margin-top: 1em;
+   margin-left: 8em;
+   text-align: left;
+   font-size: 40px;
+}
+
+.h2altSmaller {
+   color: #8254de; /* purple */
+   margin-left: 20em;
+   margin-top: -1em;
+   text-align: left;
+   font-size: 20px;
+}
+
+h3 {
+   color: #a9cf68; /* green */
+   margin-top: 1em;
+   text-align: left;
+}
+
+h6 {
+   line-height: 1.6;
+   margin-bottom: 0em;
+   margin-top: -2em;
+   color: white;
+}
+
+/* Paragraphs */
+p {
+   line-height: 1.6;
+   margin-bottom: 1em;
+   margin-top: -1em;
+   color: white;
+}
+
+.p-alt {
+   line-height: 1.6;
+   margin-bottom: 1em;
+   margin-top: -1em;
+   color: white;
+   margin-left: 14em;
+   margin-right: 14em;
+}
+
+/* Bold, Italic, Underline */
+strong {
+   font-weight: bold;
+}
+
+
+em {
+   font-style: italic;
+}
+
+
+u {
+   text-decoration: underline;
+}
+
+
+/* List - bullet */
+ul {
+   list-style-type: disc;
+   padding-left: 1.5em;
+}
+
+
+li {
+   margin-bottom: 0.5em;
+}
+
+
+/* List - number */
+ol {
+   list-style-type: decimal;
+   padding-left: 1.5em;
+}
+
+
+li {
+   margin-bottom: 0.5em;
+}
+
+
+/* Footer */
+footer {
+   background-color: black;
+   color: white;
+   text-align: center;
+   padding: 1em 0;
+   width: 100%;
+}
+
+
+/* Table */
+table {
+   width: 60%;
+   border-collapse: collapse;
+   margin: auto;
+   align-items: center;
+   padding: 1em;
+}
+
+
+th, td {
+   border: 1px solid white;
+   padding: 8px;
+   text-align: left;
+   color:  #ff69b4; /* Pink */
+}
+
+
+th {
+   background-color: #121212; /* dark grey */
+   color: white;
+}
+
+
+td {
+   background-color: black;
+}
+
+
+/* Flexbox layout */
+.container {
+   display: inline-flex;
+   flex-wrap: wrap;
+   align-items: center;
+   justify-content: space-around;
+   min-height: 100vh;
+}
+
+
+.main-content {
+   display: inline-flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   width: 90%;
+   margin: 1em;
+}
+
+
+.emailBox {
+  background-color: #121212; /* dark grey */
+   color: white;
+   text-align: center;
+   width: 100%;
+}
+
+
+.messageBox {
+  background-color: #121212; /* dark grey */
+   color: white;
+   text-align: center;
+   width: 100%;
+}
+
+
+/* Sections */
+section {
+   flex-wrap: wrap-reverse;
+   background-color: black;
+   color: white;
+   border: solid;
+   border-color: white;
+   border-width: 4px;
+   margin-right: 1em;
+   margin-left: 1em;
+   padding: 1em;
+   margin-bottom: 4em;
+   justify-content: center;
+   width: 300px;
+   height: 550px;
+}
+
+.section-alt {
+   flex-wrap: wrap-reverse;
+   background-color: #121212; /* dark grey */
+   color: white;
+   border: 0px !important;
+   margin-right: 1em;
+   margin-left: 6em;
+   padding: 1em;
+   margin-bottom: 4em;
+   justify-content: center;
+   width: 800px;
+   height: 300px;
+}
+
+
+
+aside {
+   flex: 1;
+   background-color: black;
+   padding: 1em;
+   margin-left: 1em;
+   color: white;
+   border: double;
+   border-color: white;
+   border-width: 8px;
+}
+
+
+
+img {
+ width: 300px;
+ height: auto;
+
+}
+
+
