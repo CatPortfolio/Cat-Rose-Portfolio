@@ -1,0 +1,210 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Materialize JavaScript including Carousel + Collapsible Demo</title>
+
+
+  <!-- Materialize CSS (CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+
+
+  <!-- Material Icons (optional, for icons in collapsible headers) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+
+
+  <style>
+    body { padding-bottom: 48px; background-color: black }
+    header { margin-bottom: 24px; }
+    .demo-section { margin-top: 32px; }
+    .controls .btn { margin-right: 8px; margin-bottom: 2px; }
+    .carousel { margin-top: 6px; }
+
+
+    /* Optional: make collapsible content a bit easier to read for students */
+    .collapsible-body p { margin-top: 0; }
+  </style>
+</head>
+
+
+<body>
+  <!-- Simple top nav -->
+  <header>
+    <nav>
+       <div class="nav-wrapper black">
+           <nav class="header-bg black">
+        <ul class="right black" >
+           <li><a href="materialsize.html">Recent</a></li>
+           <li> <a href="twodimensional.html">2D</a></li>
+           <li><a href="jewelry.html">Jewelry</a></li>
+          <li> <a href="About.html">About</a></li>
+         <li><a href="index.html">Home</a></li>
+                  </ul>
+               </div>
+           </div>
+           </nav>
+
+
+
+   <!-- Text and Background -->
+   <div class="center-align container">
+       <h1 class="white-text">JEWELRY</h1>
+   </div>
+
+<br>
+<br>
+
+  
+    <!-- BASIC CAROUSEL -->
+    <section id="basic" class="demo-section">
+      
+
+
+      <div class="controls center-align">
+        <button id="basicPrev" class="btn waves-effect">Prev</button>
+        <button id="basicNext" class="btn waves-effect">Next</button>
+        <button id="basicGo3" class="btn waves-effect">Go to #3</button>
+      </div>
+
+
+      <div class="carousel" id="basicCarousel">
+        <a class="carousel-item" href="#one!">
+          <img alt="Nature 1" src="https://picsum.photos/id/1015/400/400" />
+        </a>
+        <a class="carousel-item" href="#two!">
+          <img alt="Nature 2" src="https://picsum.photos/id/1025/400/400" />
+        </a>
+        <a class="carousel-item" href="#three!">
+          <img alt="Nature 3" src="https://picsum.photos/id/1035/400/400" />
+        </a>
+        <a class="carousel-item" href="#four!">
+          <img alt="Nature 4" src="https://picsum.photos/id/1045/400/400" />
+        </a>
+        <a class="carousel-item" href="#five!">
+          <img alt="Nature 5" src="https://picsum.photos/id/1055/400/400" />
+        </a>
+      </div>
+
+    </section>
+
+
+    <div class="divider"></div>
+
+
+  <!-- Materialize JS (CDN) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // =========================
+      // 1) Basic carousel init
+      // =========================
+      const basicElem = document.querySelector('#basicCarousel');
+      const basicInstance = M.Carousel.init(basicElem, {
+        duration: 200,
+        dist: -100,
+        shift: 0,
+        padding: 0,
+        numVisible: 5,
+        indicators: false
+      });
+
+
+      document.querySelector('#basicPrev').addEventListener('click', () => basicInstance.prev());
+      document.querySelector('#basicNext').addEventListener('click', () => basicInstance.next());
+      document.querySelector('#basicGo3').addEventListener('click', () => basicInstance.set(2)); // 0-based index
+
+
+      // =========================
+      // 2) Collapsible init
+      // =========================
+      const collElem = document.querySelector('#demoCollapsible');
+
+
+      // Option A: Accordion behavior (only one open at a time) -> accordion: true
+      // Option B: Multiple open at once -> accordion: false
+      const collInstance = M.Collapsible.init(collElem, {
+        accordion: false
+      });
+
+
+     
+
+
+      // =========================
+      // 3) Full-width carousel-slider init
+      // =========================
+      const fwElem = document.querySelector('#fullWidthCarousel');
+      const fwInstance = M.Carousel.init(fwElem, {
+        fullWidth: true,
+        indicators: true
+      });
+
+
+      document.querySelector('#fwPrev').addEventListener('click', () => fwInstance.prev());
+      document.querySelector('#fwNext').addEventListener('click', () => fwInstance.next());
+
+
+      // Optional autoplay for full-width
+      let autoplayOn = false;
+      let autoplayTimer = null;
+
+
+      function startAutoplay() {
+        autoplayTimer = setInterval(() => fwInstance.next(), 3000);
+        autoplayOn = true;
+      }
+      function stopAutoplay() {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+        autoplayOn = false;
+      }
+
+
+      document.querySelector('#fwToggle').addEventListener('click', () => {
+        if (autoplayOn) stopAutoplay();
+        else startAutoplay();
+      });
+    });
+  </script>
+   <script>
+       // Initialize modal
+       document.addEventListener('DOMContentLoaded', function() {
+           var elems = document.querySelectorAll('.modal');
+           var instances = M.Modal.init(elems);
+       });
+
+
+
+
+       // Function to display selected pastry
+       function displayPastry() {
+           const selectedPastry = document.querySelector('input[name="pastry"]:checked').value;
+           document.getElementById('pastry-response').innerText = `You selected: ${selectedPastry}`;
+       }
+       // Function to handle email subscription form submission
+       function submitEmail(event) {
+           event.preventDefault();
+           const email = document.getElementById('email').value;
+           document.getElementById('email-response').innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+           document.getElementById('email').value = ''; // Clear the input
+
+
+
+
+           // Display modal
+           const modalText = document.getElementById('modal-content-text');
+           modalText.innerText = `Thank you for subscribing! Updates will be sent to: ${email}`;
+           const modal = M.Modal.getInstance(document.getElementById('modal1'));
+           modal.open();
+       }
+   </script>
+
+
+</body>
+</html>
+
+
