@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+ <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>3D</title>
+
+
+<!-- show more info buttons-->
+<script>
+$(document).ready(function(){
+  $(".btn1").click(function(){
+    $("p").hide();
+  });
+  $(".btn2").click(function(){
+    $("p").show();
+  });
+});
+</script>
+
+<!-- alert message-->
+<script>
+$(document).ready(function(){
+  $("#p1").mouseleave(function(){
+    alert("Hey! Where are you going?");
+  });
+});
+</script>
+
+<!-- enlarge-->
+<script>
+$(document).ready(function(){
+  $("#p2").hover(function(){
+    $("#p2").animate({width: '500px'});
+  },
+  function(){
+    $("#p2").animate({width: '300px'});
+  }); 
+});
+</script>
+
+
+</head>
+
+
+
+  <body id="p1">
+   <!-- Header of the website -->
+   <header>
+
+
+
+
+ <div class="navbar">
+           <a href="index.html">Home</a>
+           <a href="about.html">About</a>
+           <a href="jewelry.html">Jewelry</a>
+            <a href="jquery.html">3D</a>
+           <a href="twodimensional.html">2D</a>
+            <a href="materialize">Recent</a>
+       </div>
+
+
+
+       <h1>3D</h1>
+   </header>
+    
+<body>
+
+    
+        <h2><big><strong> Four Leaf Clover </big></strong></h2>
+              <h3> <i> Maya | Low Poly Model </i> </h3>
+               <img src="images\progress1.png" alt=" Four Leaf Clover" id="p2" class="imgPos">
+           
+<p>
+     <img src="images\fourleaftexture.png" alt=" Four Leaf Clover" id="p2" class="imgPos">
+    This is the texture map for this model that was made in Photoshop</p>
+
+<button class="btn2">Show Info</button>
+<button class="btn1">Hide Info</button>
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+       <!-- Footer of the website -->
+       <footer>
+        <br>
+       <br>
+           <p> * * * </p>
+       </footer>
+  
+</body>
+</html>
+
+
