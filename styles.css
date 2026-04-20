@@ -211,6 +211,7 @@ td {
 }
 
 
+
 .emailBox {
   background-color: #121212; /* dark grey */
    color: white;
@@ -276,7 +277,12 @@ aside {
 img {
  width: 300px;
  height: auto;
-
 }
 
+
+.imgPos {
+ width: 300px;
+ height: auto;
+ position: relative;
+}
 
